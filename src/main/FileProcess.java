@@ -13,11 +13,11 @@ public class FileProcess {
 		try {
 			Indice idx = new Indice();
 			Config conf = new Config();
-			boolean isBM25 = false;
+			boolean isBM25 = true;
 			new File(dir).mkdirs();
 			idx.createFile("C:\\Users\\leandro\\workspace\\sri\\input\\ptwiki-v2.trec");
 			conf.lerDocs(dir);
-			conf.luceneTesteBusca("arqueologia -egito",5,isBM25);
+			conf.luceneTesteBusca("escritor inglês",10,isBM25);
 			conf.deleteFiles(new File(dir)); 
 		} catch (Exception e) {
 			e.printStackTrace();
